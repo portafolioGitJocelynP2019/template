@@ -1,0 +1,35 @@
+{
+  "name": "qcobjectsnewapp",
+  "version": "1.2.83",
+  "description": "App template for New App in QCObjects",
+  "main": "js/init.js",
+  "scripts": {
+    "test": "(npx eslint *.js js/*.js js/packages/*.js --fix) && (npx jasmine)",
+    "sync": "git add . && git commit -am ",
+    "preversion": "npm i --upgrade && npm test",
+    "postversion": "git push && git push --tags && npm publish",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "file",
+    "url": "https://github.com/QuickCorp/qcobjects-new-app.git"
+  },
+  "keywords": [
+    "qcobjects",
+    "newapp",
+    "js",
+    "javascript"
+  ],
+  "author": "Jean Machuca (correojean@gmail.com)",
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-qcobjects": "0.0.6",
+    "jasmine": "^3.5.0",
+    "qcobjects": "^2.3.29",
+    "qcobjects-cli": "latest"
+  },
+  "dependencies": {
+    "qcobjects-sdk": "latest"
+  }
+}
